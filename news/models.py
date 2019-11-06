@@ -45,6 +45,9 @@ class Article(models.Model):
         news = cls.objects.filter(title__icontains=search_term)
         return news
 
+    def save_article(self):
+        self.save()
+
     def __str__(self):
         return self.post
 
