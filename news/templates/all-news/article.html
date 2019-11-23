@@ -10,11 +10,13 @@
 
    <div class="row">
      <h1 class="text-center">{{article.title}}</h1>
-     <p class="text-center">{{article.post}}</p>
    </div>
 
    <div class="row">
-     <p>{{article.post}}</p>
+     {% autoescape on %}
+     {{article.post|safe}}
+    {% endautoescape %}
+
    </div>
 
    <div class="row">
